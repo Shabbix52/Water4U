@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--<layout >-->
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:gravity="center_horizontal"
+        android:id="@+id/linearColumnellipseseventyfour"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStyleblue_200">
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearMainScreen"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical" style="@style/groupStyleblue_200">
+
+            <FrameLayout
+                android:id="@+id/frameStackellipseseventyfour"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10pxh">
+
+                <ImageView
+                    android:id="@+id/imageEllipseSeventyFour"
+                    android:src="@drawable/img_ellipse74"
+                    android:layout_width="@dimen/_136pxh"
+                    android:layout_height="@dimen/_78pxh"
+                    android:layout_gravity="top|start"
+                    android:layout_marginEnd="@dimen/_10pxh"
+                    android:layout_marginBottom="@dimen/_10pxv"
+                    android:scaleType="fitXY"
+                    tools:ignore="ContentDescription"
+                    tools:src="@drawable/img_ellipse74" />
+
+                <TextView
+                    android:id="@+id/txtWater4u"
+                    style="@style/txtArialboldmt40"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|end"
+                    android:layout_marginStart="@dimen/_10pxh"
+                    android:layout_marginTop="@dimen/_10pxv"
+                    android:ellipsize="end"
+                    android:gravity="center_horizontal"
+                    android:lineSpacingExtra="@dimen/_6pxh"
+                    android:singleLine="true"
+                    android:text="@string/water4u"
+                    tools:text="@string/lbl_water4u" />
+            </FrameLayout>
+
+            <ImageView
+                android:id="@+id/imageUndrawenergize"
+                android:src="@drawable/img_undrawenergize"
+                android:layout_width="match_parent"
+                android:layout_height="464dp"
+                android:layout_marginTop="@dimen/_14pxv"
+                android:scaleType="fitXY"
+                tools:ignore="ContentDescription"
+                tools:src="@drawable/img_undrawenergize" />
+
+            <FrameLayout
+                android:id="@+id/frameStackellipseseventysix"
+                android:layout_width="match_parent"
+                android:layout_height="147dp"
+                android:layout_gravity="center|end"
+                android:layout_marginStart="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_10pxv">
+
+                <ImageView
+                    android:id="@+id/imageEllipseSeventySix"
+                    android:layout_width="@dimen/_146pxh"
+                    android:layout_height="@dimen/_198pxh"
+                    android:layout_gravity="bottom|end"
+                    android:layout_marginStart="@dimen/_10pxh"
+                    android:layout_marginTop="@dimen/_10pxv"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_ellipse76"
+                    tools:ignore="ContentDescription"
+                    tools:src="@drawable/img_ellipse76" />
+
+                <TextView
+                    android:id="@+id/txtOne"
+                    style="@style/txtArialboldmt40"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|center_vertical"
+                    android:layout_marginEnd="@dimen/_10pxh"
+                    android:layout_marginBottom="@dimen/_10pxv"
+                    android:ellipsize="end"
+                    android:gravity="center_horizontal"
+                    android:lineSpacingExtra="@dimen/_6pxh"
+                    android:singleLine="true"
+                    android:text="@string/lbl_paniapkeliye"
+                    tools:text="پانی آپ کے لئے" />
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+<!--</layout>-->

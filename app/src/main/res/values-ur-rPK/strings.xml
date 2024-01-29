@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">پانی آپ کے لئے</string>
+    <string name="lbl_add_source">پانی کی جگہ اندراج</string>
+    <string name="lbl_direction">صاف پانی پینے کی جگہ</string>
+    <string name="lbl_feed_back">آپ کی رائے</string>
+    <string name="lbl_water4u">پانی آپ کے لئے</string>
+    <string name="lbl_settings">سیٹنگز</string>
+    <string name="lbl_review">" جائزہ"</string>
+    <string name="lbl_name">نام</string>
+    <string name="lbl_submit">جمع</string>
+    <string name="lbl_water_location">پانی کی جگہ اندراج</string>
+    <string name="water4u">پانی آپ کے لئے</string>
+    <string name="lbl_locationName">جگہ کا نام</string>
+    <string name="lbl_availability">دستیابی</string>
+    <string name="lbl_language">زبان</string>
+</resources>

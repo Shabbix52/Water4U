@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rectangle_bg_blue_200"
+    tools:context=".SettingsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/rectangle_gradient_s_blue_50_e_blue_100_00_border_black_900_radius_tl_48_tr_48"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/linearFeedbackButton"
+            style="@style/groupStyleblue_51cornerRadius"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_34pxh"
+            android:layout_marginTop="@dimen/_19pxv"
+            android:layout_marginEnd="@dimen/_34pxh"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/feedbackIMG"
+                android:layout_width="@dimen/_58pxh"
+                android:layout_height="@dimen/_59pxh"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="@dimen/_19pxh"
+                android:layout_marginTop="@dimen/_18pxv"
+                android:layout_marginEnd="@dimen/_19pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_menu"
+                tools:ignore="ContentDescription"
+                tools:src="@drawable/icon128px" />
+
+            <TextView
+                android:id="@+id/txtFeedBack"
+                style="@style/txtInterbold16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_12pxh"
+                android:layout_marginTop="@dimen/_2pxv"
+                android:layout_marginEnd="@dimen/_12pxh"
+                android:layout_marginBottom="@dimen/_7pxv"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:lineSpacingExtra="@dimen/_4pxh"
+                android:singleLine="true"
+                android:text="@string/lbl_language"
+                android:textSize="20sp"
+                tools:text="@string/lbl_language" />
+        </LinearLayout>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipEnglish"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:checkable="true"
+            android:freezesText="true"
+            android:includeFontPadding="true"
+            android:text="@string/lbl_english"
+            android:textAlignment="textStart"
+            android:textColor="#FFFFFF"
+            android:textDirection="ltr"
+            android:textSize="25sp"
+            app:chipBackgroundColor="@color/indigo_A400"
+            app:chipIconEnabled="false"
+            app:chipMinHeight="40dp"
+            app:chipMinTouchTargetSize="50dp"
+            app:ensureMinTouchTargetSize="true"
+            app:iconStartPadding="10dp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipUrdu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:checkable="true"
+            android:freezesText="true"
+            android:text="@string/lbl_urdu"
+            android:textAlignment="textStart"
+            android:textColor="#E4E0E0"
+            android:textDirection="rtl"
+            android:textSize="25sp"
+            app:chipBackgroundColor="@color/indigo_A400"
+            app:chipMinHeight="40dp"
+            app:iconStartPadding="10dp"
+            app:textStartPadding="15dp" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

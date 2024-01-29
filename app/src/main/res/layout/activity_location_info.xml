@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearColumnellipseseventyfive"
+    style="@style/groupStyleblue_200"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/FeedBack"
+        style="@style/groupStyleblue_200"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="start"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/frameStackellipseseventyfive"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_110pxv"
+            android:layout_marginEnd="@dimen/_10pxh">
+
+            <ImageView
+                android:id="@+id/imageEllipseSeventyFive"
+                android:layout_width="@dimen/_139pxh"
+                android:layout_height="@dimen/_78pxh"
+                android:layout_gravity="top|start"
+                android:layout_marginEnd="@dimen/_10pxh"
+                android:layout_marginBottom="@dimen/_10pxv"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_ellipse75_78x139"
+                tools:ignore="ContentDescription"
+                tools:src="@drawable/img_ellipse75_78x139" />
+
+            <TextView
+                android:id="@+id/txtWater4u"
+                style="@style/txtArialboldmt40"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_marginStart="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_10pxv"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:lineSpacingExtra="@dimen/_6pxh"
+                android:singleLine="true"
+                android:text="@string/water4u"
+                tools:text="@string/lbl_water4u" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frameStackellipseseventyfiveOne"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="25dp">
+
+            <ImageView
+                android:id="@+id/imageEllipseSeventyFiveOne"
+                android:layout_width="@dimen/_148pxh"
+                android:layout_height="@dimen/_198pxh"
+                android:layout_gravity="bottom|end"
+                android:layout_marginStart="@dimen/_10pxh"
+                android:layout_marginTop="@dimen/_10pxv"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_ellipse75_198x148"
+                tools:ignore="ContentDescription"
+                tools:src="@drawable/img_ellipse75_198x148" />
+
+            <LinearLayout
+                android:id="@+id/linearColumnmenu"
+                style="@style/groupStylecornerRadius"
+                android:layout_width="match_parent"
+                android:layout_height="638dp"
+                android:layout_gravity="top|start"
+                android:layout_marginBottom="@dimen/_10pxv"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/linearFeedbackButton"
+                    style="@style/groupStyleblue_51cornerRadius"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_36pxh"
+                    android:layout_marginTop="@dimen/_28pxv"
+                    android:layout_marginEnd="@dimen/_36pxh"
+                    android:gravity="center|center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/feedbackIMG"
+                        android:layout_width="@dimen/_58pxh"
+                        android:layout_height="@dimen/_59pxh"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginStart="@dimen/_21pxh"
+                        android:layout_marginTop="@dimen/_18pxv"
+                        android:layout_marginEnd="@dimen/_21pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_menu"
+                        tools:ignore="ContentDescription"
+                        tools:src="@drawable/img_menu" />
+
+                    <TextView
+                        android:id="@+id/txtAddWaterLocation"
+                        style="@style/txtInterbold20"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_21pxh"
+                        android:layout_marginEnd="@dimen/_20pxh"
+                        android:layout_marginBottom="@dimen/_5pxv"
+                        android:ellipsize="end"
+                        android:gravity="center_horizontal"
+                        android:lineSpacingExtra="@dimen/_5pxh"
+                        android:singleLine="true"
+                        android:text="@string/lbl_add_source"
+                        android:textSize="20sp"
+                        tools:text="@string/lbl_water_location" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txtLocationName"
+                    style="@style/txtIntermedium14"
+                    android:layout_width="370dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_36pxh"
+                    android:layout_marginTop="@dimen/_29pxv"
+                    android:layout_marginEnd="@dimen/_36pxh"
+                    android:ellipsize="end"
+                    android:lineSpacingExtra="@dimen/_3pxh"
+                    android:singleLine="true"
+                    android:text="@string/lbl_locationName"
+                    android:textSize="20sp"
+                    tools:text="@string/lbl_locationName" />
+
+                <EditText
+                    android:id="@+id/inputLocationName"
+                    style="@style/etSolidRounded"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_36pxh"
+                    android:layout_marginTop="@dimen/_9pxv"
+                    android:layout_marginEnd="@dimen/_29pxh"
+                    android:background="@drawable/rectangle_bg_white_a700_radius_8"
+                    android:drawablePadding="@dimen/_9pxh"
+                    android:ellipsize="end"
+                    android:hint="@string/lbl_locationHint"
+                    android:inputType="text"
+                    android:lineSpacingExtra="@dimen/_4pxh"
+                    android:paddingStart="@dimen/_15pxh"
+                    android:paddingTop="@dimen/_12pxv"
+                    android:paddingEnd="@dimen/_30pxh"
+                    android:paddingBottom="@dimen/_11pxv"
+                    android:singleLine="true"
+                    android:textColorHint="@color/black"
+                    android:textSize="18sp"
+                    tools:ignore="Autofill" />
+
+                <TextView
+                    android:id="@+id/txtFrom"
+                    style="@style/txtIntermedium14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_36pxh"
+                    android:layout_marginTop="@dimen/_29pxv"
+                    android:layout_marginEnd="@dimen/_36pxh"
+                    android:ellipsize="end"
+                    android:lineSpacingExtra="@dimen/_3pxh"
+                    android:singleLine="true"
+                    android:text="@string/lbl_from"
+                    android:textSize="20sp"
+                    tools:text="@string/lbl_from" />
+
+                <EditText
+                    android:id="@+id/inputFrom"
+                    style="@style/etSolid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_36pxh"
+                    android:layout_marginTop="@dimen/_9pxv"
+                    android:layout_marginEnd="@dimen/_29pxh"
+                    android:background="@drawable/rectangle_bg_white_a700"
+                    android:drawablePadding="@dimen/_9pxh"
+                    android:ellipsize="end"
+                    android:hint="@string/lbl_From_hint"
+                    android:inputType="textEmailAddress"
+                    android:lineSpacingExtra="@dimen/_4pxh"
+                    android:paddingStart="@dimen/_15pxh"
+                    android:paddingTop="@dimen/_13pxv"
+                    android:paddingEnd="@dimen/_30pxh"
+                    android:paddingBottom="@dimen/_10pxv"
+                    android:singleLine="true"
+                    android:textColorHint="@color/black"
+                    android:textSize="18sp"
+                    tools:ignore="Autofill" />
+
+                <TextView
+                    android:id="@+id/txtTo"
+                    style="@style/txtIntermedium14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_36pxh"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginEnd="@dimen/_36pxh"
+                    android:ellipsize="end"
+                    android:lineSpacingExtra="@dimen/_3pxh"
+                    android:singleLine="true"
+                    android:text="@string/lbl_to"
+                    android:textSize="20sp"
+                    tools:text="@string/lbl_to" />
+
+                <EditText
+                    android:id="@+id/inputTo"
+                    style="@style/etSolid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_36pxh"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="@dimen/_29pxh"
+                    android:background="@drawable/rectangle_bg_white_a700"
+                    android:drawablePadding="@dimen/_9pxh"
+                    android:ellipsize="end"
+                    android:hint="@string/lbl_To_hint"
+                    android:inputType="textEmailAddress"
+                    android:lineSpacingExtra="@dimen/_4pxh"
+                    android:paddingStart="@dimen/_15pxh"
+                    android:paddingTop="@dimen/_13pxv"
+                    android:paddingEnd="@dimen/_30pxh"
+                    android:paddingBottom="@dimen/_10pxv"
+                    android:singleLine="true"
+                    android:textColorHint="@color/black"
+                    android:textSize="18sp"
+                    tools:ignore="Autofill" />
+
+                <Button
+                    android:id="@+id/submitButton2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_36pxh"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="@dimen/_29pxh"
+                    android:background="@drawable/rectangle_bg_indigo_a400_radius_15"
+                    android:text="@string/lbl_submit"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+</LinearLayout>

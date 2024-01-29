@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "6854734830",
+    "project_id": "tribal-joy-402509",
+    "storage_bucket": "tribal-joy-402509.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:6854734830:android:c391463555e40cee4b54ff",
+        "android_client_info": {
+          "package_name": "com.example.water4u"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJube-dV4cG2NcsCYipabq8T196eFoBNA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

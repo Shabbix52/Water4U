@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">Water4U</string>
+    <string name="title_activity_main_screen" translatable="false">MainScreen</string>
+    <string name="loading" translatable="false">Loading…</string>
+    <string name="no_internet_connection" translatable="false">No internet connection!</string>
+    <string name="lbl_add_text" translatable="false">Add Text</string>
+    <string name="lbl_email" translatable="false">Email</string>
+    <string name="lbl_add_source">Add Source</string>
+    <string name="msg_don_t_have_an_a" translatable="false">Don\u2019t have an account?  Sign up</string>
+    <string name="msg_don_t_have_an_a2" translatable="false">Don\u2019t have an account?  </string>
+    <string name="lbl_direction">Direction</string>
+    <string name="msg_already_have_an" translatable="false">Already have an account?  Signin</string>
+    <string name="lbl_login" translatable="false">Login</string>
+    <string name="msg_already_have_an2" translatable="false">Already have an account?  </string>
+    <string name="msg_hussain_finesse" translatable="false">hussain@finesse.com</string>
+    <string name="lbl_feed_back">Feedback</string>
+    <string name="lbl_sign_in" translatable="false">Sign in</string>
+    <string name="lbl_your_password" translatable="false">Your password</string>
+    <string name="lbl_abc_email_com" translatable="false">abc@email.com</string>
+    <string name="lbl_water4u">Water4u</string>
+    <string name="lbl_sign_up" translatable="false">Sign up</string>
+    <string name="lbl_password" translatable="false">Password</string>
+    <string name="lbl_sign_up2" translatable="false">Sign Up</string>
+    <string name="lbl_settings">Settings</string>
+    <string name="lbl_review">Review</string>
+    <string name="msg_forgot_password" translatable="false">Forgot Password?</string>
+    <string name="lbl_9_41" translatable="false">9:41</string>
+    <string name="lbl_name">Name</string>
+    <string name="lbl_paniapkeliye" translatable="false">پانی آپ کے لئے</string>
+    <string name="lbl_signin2" translatable="false">Signin</string>
+    <string name="lbl_remember_me" translatable="false">Remember Me</string>
+    <string name="lbl_shabbir" translatable="false">Shabbir</string>
+    <string name="msg_helping_text_fo" translatable="false">Helping text for user</string>
+    <string name="lbl_submit">Submit</string>
+    <string name="lbl_full_name" translatable="false">Full name</string>
+    <string name="msg_please_enter_valid_email" translatable="false">Please enter valid email</string>
+    <string name="msg_please_enter_valid_pa" translatable="false">Please enter valid password</string>
+    <string name="title_activity_maps" translatable="false">MapsActivity</string>
+    <string name="lbl_water_location">Add Source</string>
+    <string name="water4u">Water4u</string>
+    <string name="lbl_locationName">Location Name</string>
+    <string name="lbl_from" translatable="false">Timing From</string>
+    <string name="lbl_to" translatable="false">Timing To</string>
+    <string name="lbl_availability">Availability</string>
+    <string name="lbl_locationHint" translatable="false">Cantt Thana</string>
+    <string name="lbl_To_hint" translatable="false">11 pm</string>
+    <string name="lbl_From_hint" translatable="false">8 am</string>
+    <string name="lbl_language" translatable="true">Language</string>
+    <string name="lbl_urdu" translatable="false">اردو</string>
+    <string name="lbl_english" translatable="false">English</string>
+</resources>
