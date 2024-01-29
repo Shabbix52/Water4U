@@ -24,6 +24,8 @@
         <activity
             android:name=".LocationInfo"
             android:exported="false" />
+        <activity android:name=".ReviewActivity"
+            android:exported="false" />
         <!--
              TODO: Before you run your application, you need a Google Maps API key.
 

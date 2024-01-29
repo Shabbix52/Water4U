@@ -76,6 +76,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         reviewButton = findViewById(R.id.reviewButton);
         reviewButton.setVisibility(View.GONE);
+
+        reviewButton.setOnClickListener(view -> {
+            Intent reviewActivity = new Intent(MapsActivity.this, ReviewActivity.class);
+            startActivity(reviewActivity);
+        });
     }
 
     /**
