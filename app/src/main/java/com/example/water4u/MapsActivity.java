@@ -1,23 +1,21 @@
 package com.example.water4u;
 
-import static androidx.core.graphics.drawable.DrawableKt.toBitmap;
-
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
-import androidx.core.graphics.drawable.DrawableKt;
 import androidx.fragment.app.FragmentActivity;
 
 import com.example.water4u.databinding.ActivityMapsBinding;
@@ -50,14 +48,14 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     private GoogleMap mMap;
     private Marker clickedMarker;
-    private LatLng lastAddedMarker;
     private FusedLocationProviderClient fusedLocationClient;
     private static final int LOCATION_PERMISSION_REQUEST_CODE = 1;
     LatLng userLocation;
     Polyline currentPolyline;
-
     FirebaseFirestore db = FirebaseFirestore.getInstance();
     boolean AddLocation;
+    boolean flag = true;
+    Button reviewButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,6 +73,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mapFragment.getMapAsync(this);
 
         AddLocation = getIntent().getBooleanExtra("Add Location",false);
+
+        reviewButton = findViewById(R.id.reviewButton);
+        reviewButton.setVisibility(View.GONE);
     }
 
     /**
@@ -90,23 +91,25 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onMapReady(@NonNull GoogleMap googleMap) {
         mMap = googleMap;
+
+        if(ContextCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED){
+            ActivityCompat.requestPermissions(this, new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION},LOCATION_PERMISSION_REQUEST_CODE);
+        } else {
+            getDeviceLocation();
+        }
+
         fetchAndDisplayMarkers();
-//        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(lastAddedMarker,16));
 
-        mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
-            @Override
-            public boolean onMarkerClick(@NonNull Marker marker) {
-                LatLng dest = marker.getPosition();
+        mMap.setOnMarkerClickListener(marker -> {
+            LatLng dest = marker.getPosition();
 
-                if(currentPolyline != null){
-                    currentPolyline.remove();
-                }
-
-                if(dest != null){
-                requestDirections(dest);
-                }
-                return false;
+            if(currentPolyline != null){
+                currentPolyline.remove();
             }
+
+            reviewButton.setVisibility(View.VISIBLE);
+            requestDirections(dest);
+            return false;
         });
 
         // Adding a onClick Listener only when the user clicks on the add water location
@@ -124,12 +127,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 startActivity(locationInfo);
             });
         }
-
-        if(ContextCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED){
-            ActivityCompat.requestPermissions(this, new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION},LOCATION_PERMISSION_REQUEST_CODE);
-        } else {
-            getDeviceLocation();
-        }
     }
 
     private void getDeviceLocation(){
@@ -144,6 +141,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     mMap.addMarker(markerOptions);
 
                     mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(userLocation,16));
+                    flag = false;
                 }
             });
         } catch (SecurityException e) {
@@ -160,15 +158,15 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
                     if(geoPoint != null){
                         LatLng location = new LatLng(geoPoint.getLatitude(), geoPoint.getLongitude());
-                        lastAddedMarker = location;
 
                         mMap.addMarker(new MarkerOptions()
                                 .position(location)
                                 .title(locationName)
                                 .snippet("Available From 8am to 6pm")
                                 .icon(BitmapFromVector(getApplicationContext(),R.drawable.water_droplet)));
-
-                        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(location,16));
+//                        if(flag){
+//                            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(location,16));
+//                        }
                     }
                 }
             }
@@ -203,12 +201,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             com.google.maps.model.EncodedPolyline polyline = result.routes[0].overviewPolyline;
             List<LatLng> decodedPath = PolyUtil.decode(polyline.getEncodedPath());
 
-            runOnUiThread(() -> {
-                currentPolyline = mMap.addPolyline(new PolylineOptions()
-                        .addAll(decodedPath)
-                        .color(Color.BLUE)
-                        .width(5));
-            });
+            runOnUiThread(() -> currentPolyline = mMap.addPolyline(new PolylineOptions()
+                    .addAll(decodedPath)
+                    .color(Color.BLUE)
+                    .width(5)));
         }
     }
 
