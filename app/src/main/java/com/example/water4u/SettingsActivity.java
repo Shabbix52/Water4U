@@ -60,11 +60,11 @@ public class SettingsActivity extends AppCompatActivity {
     }
     private void loadLocale() {
         SharedPreferences prefs = getSharedPreferences("MyAppPrefs", MODE_PRIVATE);
-        String language = prefs.getString("language", "");
+        String language = prefs.getString("language", "en");
 
         if(language.equals("en")){
             englishChip.setChecked(true);
-        } else {
+        } else if (language.equals("ur")){
             urduChip.setChecked(true);
         }
     }
@@ -73,4 +73,15 @@ public class SettingsActivity extends AppCompatActivity {
         finish();
         startActivity(intent);
     }
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+
+        // Restart the previous activity
+        Intent intent = new Intent(this, MainMenu.class);
+
+        startActivity(intent);
+        finish(); // Finish the current activity
+    }
+
 }

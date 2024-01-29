@@ -53,6 +53,7 @@ public class MainMenu extends AppCompatActivity {
         settingsIMG.setOnClickListener(view -> {
             Intent settingsIntent = new Intent(MainMenu.this, SettingsActivity.class);
             startActivity(settingsIntent);
+            finish();
         });
     }
     private void setLocale(String languageCode) {
